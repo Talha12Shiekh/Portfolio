@@ -1003,3 +1003,16 @@ input#password{
 }
 
   
+.projects_container{
+    text-align: center;
+}
+
+.students_app_code_container{
+    width: 80%;
+    margin-block: 5rem;
+    margin-inline: auto;
+}
+
+pre[aria-hidden="true"]{
+    font-size: 1rem;
+}
