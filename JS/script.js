@@ -6,6 +6,24 @@ let humburgar = document.getElementsByClassName("humburgar")[0];
 let sidebar = document.getElementsByClassName("sidebar")[0];
 let overlay = document.getElementById("mobile-overlay");
 let cross = document.getElementsByClassName("cross")[0];
+let addModal = document.querySelector("[class='add_modal']");
+
+
+setTimeout(() => {
+    addModal.showModal()
+},2000);
+
+addModal.addEventListener("click", e => {
+    const dialogDimensions = addModal.getBoundingClientRect()
+    if (
+      e.clientX < dialogDimensions.left ||
+      e.clientX > dialogDimensions.right ||
+      e.clientY < dialogDimensions.top ||
+      e.clientY > dialogDimensions.bottom
+    ) {
+      addModal.close()
+    }
+  })
 
 function close() {
     sidebar.style.left = "-270px";
